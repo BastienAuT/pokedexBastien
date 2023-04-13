@@ -1,6 +1,8 @@
 .right {
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 100px;
   flex-basis: 70%;
 
@@ -8,23 +10,41 @@
     display: flex;
     flex-direction: column;
     .name {
+      margin-bottom: 20px;
       text-align: center;
       font-weight: 800;
-      font-size: 24px;
+      font-size: 34px;
     }
 
     .bigPicture {
-     
-  margin: auto;
-
-      max-height: 70%;
+      display: flex;
+      margin: auto;
       max-width: 70%;
+      margin-bottom: 50px;
     }
 
     .stats {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      margin:auto;
+      border: 4px dashed red;
+      padding: 20px
     }
+
   }
+  .sprite{
+    display: flex;
+    margin: auto;
+    width: 130px;
+
+   
+  }
+}
+
+.select {
+  display: flex;
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 30%;
+  font-size: 20px;
 }
