@@ -82,9 +82,9 @@
     order: 1;
     display: flex;
     max-height: calc(51vh - 10px);
-    margin-top: 5px;
     justify-content: center;
     margin: auto;
+    padding: 4px;
 
     .card {
       display: flex;
