@@ -83,8 +83,8 @@
     .sprite {
       display: flex;
       margin: auto;
-      width: 110px;
-      height: 110px;
+      width: 75px;
+      height: 75px;
     }
   }
 
@@ -112,54 +112,6 @@
     margin-right: 10%;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .right {
-    .pokemon {
-      .name {
-        margin-top: 10px;
-        font-size: 12px;
-      }
-
-      .bigPicture {
-        display: flex;
-        margin: auto;
-        max-width: 20%;
-      }
-
-      .stats {
-        display: flex;
-        margin: auto;
-        font-size: 10px;
-        border: 5px double red;
-        gap: 4px;
-        padding: 10px;
-      }
-    }
-    .sprite {
-      display: flex;
-      margin: auto;
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  .evolutions {
-    flex-direction: row-reverse;
-    align-items: center;
-    margin: auto;
-  }
-
-  .no-evolutions {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .select {
-    margin-bottom: 10%;
-  }
-}
-
 
 @media screen and (min-width: 768px) {
   .right {
