@@ -1,8 +1,11 @@
 :root {
-
   background-color: #535151;
-  color:white;
-
+  background-image: url(https://www.wallpaperflare.com/static/434/553/167/pok%C3%A9mon-pokemon-ash-gray-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-
+html {
+  font-family: "Press Start 2P", cursive;
+}

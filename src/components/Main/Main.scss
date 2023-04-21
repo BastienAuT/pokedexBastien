@@ -1,12 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
+  color: white;
 }
 
 .container {
   display: flex;
-  justify-content: center;
+}
 
+.main {
+  .container {
+    scrollbar-width: none; /* Firefox */
+
+    .left::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }

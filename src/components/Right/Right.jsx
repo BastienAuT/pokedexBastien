@@ -76,8 +76,6 @@ useEffect(() => {
           <span>DEF. SPE : {specialDefense}</span>
           <span>VITESSE : {speed}</span>
         </div>
-      </div>
-      <p>{pokemon.description}</p>
       {pokemon.apiEvolutions && pokemon.apiEvolutions.length > 0 ? (
         <div className="evolutions">
           {evo.sprite && <img className="sprite" src={evo.sprite} alt={`${evo.name} sprite`} />}
@@ -91,8 +89,9 @@ useEffect(() => {
           ))}
         </div>
       ) : (
-        <div className="no-evolutions">Ce pokemon n'a pas d'évolutions.</div>
+        <div className="no-evolutions">Ce Pokemon n'a pas d'évolution(s).</div>
       )}
+        </div>
     </div>
   );
 };

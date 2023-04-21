@@ -20,11 +20,6 @@ const Left = ({ setSelectedPokemon }) => {
     fetchData();
   }, []);
 
-  const handleClick = (pokemon) => {
-    setSelectedPokemon(pokemon);
-    console.log("Selected Pokemon: ", pokemon);
-  };
-
   const typeColors = {
     normal: "#A8A878",
     feu: "#F08030",
@@ -33,7 +28,7 @@ const Left = ({ setSelectedPokemon }) => {
     vol: "#A890F0",
     plante: "#78C850",
     poison: "#A040A0",
-    electrik: "#F8D030",
+    électrik: "#F8D030",
     sol: "#E0C068",
     psy: "#F85888",
     roche: "#B8A038",
@@ -46,40 +41,59 @@ const Left = ({ setSelectedPokemon }) => {
     fée: "#EE99AC",
   };
 
-if (!pokemonList) {
-  return (
-    <div className="loader">
-      <div className="spinner"></div>
-    </div>
-  );
-}
+  function handleClick(pokemon) {
+    setSelectedPokemon(pokemon);
+  }
+
+  if (!pokemonList) {
+    return (
+      <div className="loader">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="left">
-      {pokemonList.map((pokemon) => (
-        <div
-          className="card"
-          key={pokemon.id}
-          onClick={() => handleClick(pokemon)}
-        >
-          <div className="number">{pokemon.number}</div>
-          <img className="image" src={pokemon.image} alt={pokemon.name} />
-          <span className="name">{pokemon.name}</span>
-          <div className="types">
-            {pokemon.apiTypes.map((typeObj, index) => (
-              <span
-                key={index}
-                className={`type ${typeObj.name.toLowerCase()}`}
-                style={{
-                  backgroundColor: typeColors[typeObj.name.toLowerCase()],
-                }}
-              >
-                {typeObj.name}
-              </span>
-            ))}
+      {pokemonList.map((pokemon) => {
+        const bgBorder = `10px double rgba(0, 0, 0, 0.4)`;
+        const bgColor =
+          pokemon.apiTypes.length > 1
+            ? typeColors[pokemon.apiTypes[1].name.toLowerCase()]
+            : typeColors[pokemon.apiTypes[0].name.toLowerCase()];
+        return (
+          <div
+            className={`card ${pokemon.apiTypes
+              .map((typeObj) => typeObj.name.toLowerCase())
+              .join(" ")}`}
+            key={pokemon.id}
+            onClick={() => handleClick(pokemon)}
+            style={{
+              backgroundColor: bgColor,
+              border: bgBorder,
+            }}
+          >
+            <div className="number">{pokemon.number}</div>
+            <img className="image" src={pokemon.image} alt={pokemon.name} />
+            <span className="name">{pokemon.name}</span>
+            <div className="types">
+              
+              {pokemon.apiTypes.map((typeObj, index) => (
+                <div
+                  key={index}
+                  className={`type ${typeObj.name.toLowerCase()}`}
+                  style={{
+                    textShadow: `rgba(0,0,0,0.8)`,
+                    
+                  }}
+                >
+                  {typeObj.name}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };
