@@ -81,7 +81,7 @@
   .left {
     order: 1;
     display: flex;
-    max-height: calc(50vh - 10px);
+    max-height: calc(62vh - 10px);
     margin-top: 10px;
     justify-content: center;
     margin: auto;
@@ -137,7 +137,7 @@
 
 @media screen and (min-width: 768px) {
   .left {
-    max-height: calc(55vh - 10px);
+    max-height: calc(59vh - 10px);
     margin: auto;
     .card {
       margin-left: 5%;
@@ -167,7 +167,7 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .left {
-    max-height: calc(35vh - 10px);
+    max-height: calc(45vh - 10px);
     margin-top: 10px;
     margin: auto;
 
@@ -192,7 +192,7 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   .left {
-    max-height: calc(35vh - 10px);
+    max-height: calc(38vh - 10px);
     margin-top: 10px;
     margin: auto;
     margin-left: 20%;
@@ -245,13 +245,13 @@
   }
 }
 
-@media screen and (min-width: 1920px) and (max-width: 2559px) {
+@media screen and (min-width: 1920px)  {
   .left {
-    max-height: calc(35vh - 10px);
+    max-height: calc(46vh - 10px);
     margin-top: 10px;
     margin: auto;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 
     .name {
       font-size: 0.7rem;
@@ -270,5 +270,27 @@
       font-size: 0.6rem;
       text-align: center;
     }
+  
+   .card {
+      display: flex;
+      border-radius: 10%;
+      width: 50%;
+      max-width: 250px;
+      height: fit-content;
+      margin-bottom: 7px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      transition: transform 0.3s ease-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  
+  
+  
   }
 }

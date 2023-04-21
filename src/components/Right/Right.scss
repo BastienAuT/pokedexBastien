@@ -61,14 +61,14 @@
         margin-top: 20px;
         margin-bottom: 8px;
         font-weight: 800;
-        font-size: 10px;
+        font-size: 12px;
         text-decoration: underline;
       }
 
       .bigPicture {
         display: flex;
         margin: auto;
-        max-width: 25%;
+        max-width: 30%;
       }
 
       .stats {
@@ -83,14 +83,14 @@
     .sprite {
       display: flex;
       margin: auto;
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
     }
   }
 
   .evolutions {
     display: flex;
-    font-size: 10px;
+    font-size: 12px;
     flex-direction: column;
     align-items: center;
   }
@@ -166,19 +166,19 @@
     .pokemon {
       .name {
         margin-top: 10px;
-        font-size: 12px;
+        font-size: 18px;
       }
 
       .bigPicture {
         display: flex;
         margin: auto;
-        max-width: 20%;
+        max-width: 35%;
       }
 
       .stats {
         display: flex;
         margin: auto;
-        font-size: 10px;
+        font-size: 15px;
         border: 5px double red;
         gap: 4px;
         padding: 10px;
@@ -196,6 +196,7 @@
     flex-direction: row-reverse;
     align-items: center;
     margin: auto;
+    font-size: 16px;
   }
 
   .no-evolutions {
@@ -303,6 +304,58 @@
   .no-evolutions {
     flex-direction: row;
     justify-content: center;
+  }
+
+  .select {
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+    .right {
+    .pokemon {
+      .name {
+      
+        font-size: 20px;
+      }
+
+      .bigPicture {
+        display: flex;
+        margin: auto;
+        max-width: 80%;
+      }
+
+      .stats {
+        display: flex;
+        margin: auto;
+        font-size: 20px;
+        border: 5px double red;
+        gap: 4px;
+        padding: 20px;
+      }
+       span{
+      font-size: 18px;
+    }
+    }
+    .sprite {
+      display: flex;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .evolutions {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto;
+    font-size: 20px;
+  }
+
+  .no-evolutions {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
   }
 
   .select {
