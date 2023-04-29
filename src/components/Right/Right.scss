@@ -58,10 +58,9 @@
       display: flex;
 
       .name {
-        margin-top: 10px;
         margin-bottom: 8px;
         font-weight: 800;
-        font-size: 10px;
+        font-size: 15px;
         text-decoration: underline;
       }
 
@@ -83,8 +82,8 @@
     .sprite {
       display: flex;
       margin: auto;
-      width: 50px;
-      height: 50px;
+      width: 75px;
+      height: 75px;
     }
   }
 
@@ -117,22 +116,18 @@
   .right {
     .pokemon {
       .name {
-        margin-top: 10px;
-        font-size: 18px;
+        margin-top: 2px;
+        font-size: 14px;
       }
 
       .bigPicture {
         display: flex;
         margin: auto;
-        max-width: 35%;
+        max-width: 25%;
       }
 
       .stats {
-        display: flex;
-        margin: auto;
-        font-size: 15px;
-        border: 5px double red;
-        gap: 4px;
+        font-size: 12px;
         padding: 10px;
       }
     }
@@ -162,7 +157,7 @@
 }
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 192px) {
     .right {
     .pokemon {
       .name {
@@ -224,7 +219,7 @@
       .bigPicture {
         display: flex;
         margin: auto;
-        max-width: 70%;
+        max-width: 50%;
       }
 
       .stats {
@@ -274,7 +269,7 @@
       .bigPicture {
         display: flex;
         margin: auto;
-        max-width: 80%;
+        max-width: 40%;
       }
 
       .stats {
@@ -287,6 +282,50 @@
       }
        span{
       font-size: 18px;
+    }
+    }
+    .sprite {
+      display: flex;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .evolutions {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: auto;
+    font-size: 20px;
+  }
+
+  .no-evolutions {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .select {
+    margin-bottom: 10%;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+    .right {
+    .pokemon {
+      .name {
+
+        font-size: 20px;
+      }
+
+      .bigPicture {
+        display: flex;
+        margin: auto;
+        max-width: 50%;
+      }
+
+       span{
+      font-size: 22px;
     }
     }
     .sprite {

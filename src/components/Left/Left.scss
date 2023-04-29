@@ -247,11 +247,61 @@
 
 @media screen and (min-width: 1920px)  {
   .left {
-    max-height: calc(38vh - 10px);
+    max-height: calc(30vh - 10px);
     margin-top: 10px;
     margin: auto;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 15%;
+
+    .name {
+      font-size: 0.7rem;
+    }
+
+    .image {
+      display: flex;
+      margin: auto;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    .types {
+      gap: 6px;
+      font-size: 0.6rem;
+      text-align: center;
+    }
+  
+   .card {
+      display: flex;
+      border-radius: 10%;
+      width: 50%;
+      max-width: 250px;
+      height: fit-content;
+      margin-bottom: 7px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      transition: transform 0.3s ease-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  
+  
+  
+  }
+}
+
+@media screen and (min-width: 2560px)  {
+  .left {
+    max-height: calc(46vh - 10px);
+    margin-top: 10px;
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 15%;
 
     .name {
       font-size: 0.7rem;
